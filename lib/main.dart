@@ -43,6 +43,8 @@ class ProductDetailsPage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 SizedBox(width: 170),
                 Container(
@@ -65,9 +67,10 @@ class ProductDetailsPage extends StatelessWidget {
                 Icon(
                   Icons.attach_money, // Dollar icon
                   color: Colors.orange,
-                  size: 28,
+                  size: 32,
                 ),
                 Container(
+                  padding: EdgeInsets.fromLTRB(7, 2, 7, 2),
                   decoration: BoxDecoration(
                     color: Colors.orange,
                     borderRadius: BorderRadius.circular(10),
