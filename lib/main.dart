@@ -42,21 +42,51 @@ class ProductDetailsPage extends StatelessWidget {
               ],
             ),
             SizedBox(height: 20),
-            Container(
-              decoration: BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(
-                    color: Colors.black,
-                    width: 2,
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                SizedBox(width: 170),
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        color: Colors.black,
+                        width: 2,
+                      ),
+                    ),
+                  ),
+                  child: Text(
+                    'kassandra',
+                    style: TextStyle(
+                      fontSize: 23,
+                    ),
                   ),
                 ),
-              ),
-              child: Text(
-                'kassandra',
-                style: TextStyle(
-                  fontSize: 23,
+                SizedBox(width: 80),
+                Icon(
+                  Icons.attach_money, // Dollar icon
+                  color: Colors.orange,
+                  size: 32,
                 ),
-              ),
+                Container(
+                  padding: EdgeInsets.fromLTRB(7, 2, 7, 2),
+                  decoration: BoxDecoration(
+                    color: Colors.orange,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 2,
+                    ),
+                  ),
+                  child: Text(
+                    '65',
+                    style: TextStyle(
+                      fontSize: 21,
+                    ),
+                  ),
+                ),
+              ],
             ),
             SizedBox(height: 20),
             Container(
