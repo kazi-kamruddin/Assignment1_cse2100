@@ -1,7 +1,6 @@
 # assignment1_cse2100_id125
 
 A new Flutter project.
-shob adharer sheshe
 
 ## Getting Started
 
