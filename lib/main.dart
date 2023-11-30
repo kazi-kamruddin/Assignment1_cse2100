@@ -43,19 +43,13 @@ class ProductDetailsPage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(width: 105),
                 Container(
                   decoration: BoxDecoration(
-                    border: Border.(
-                      bottom: BorderSide(
-                        color: Colors.black,
-                        width: 2,
-                      ),
-                    ),
-                    : Border(
+                    border: Border(
                       bottom: BorderSide(
                         color: Colors.black,
                         width: 2,
@@ -72,13 +66,13 @@ class ProductDetailsPage extends StatelessWidget {
                 SizedBox(width: 40),
                 Icon(
                   Icons.attach_money, // Dollar icon
-                  color: Colors.orange,
+                  color: Colors.white70,
                   size: 32,
                 ),
                 Container(
                   padding: EdgeInsets.fromLTRB(7, 2, 7, 2),
                   decoration: BoxDecoration(
-                    color: Colors.orange,
+                    color: Colors.white70,
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
                         color: Colors.black,
@@ -127,11 +121,11 @@ class BuyNowPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[600],
+      backgroundColor: Colors.black45,
       appBar: AppBar(
         title: Text("PAYMENT"),
         centerTitle: true,
-        backgroundColor: Colors.blueGrey[800],
+        backgroundColor: Colors.black54,
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(30, 20, 30, 10),
