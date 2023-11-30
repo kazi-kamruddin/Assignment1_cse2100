@@ -99,9 +99,38 @@ class ProductDetailsPage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => BuyNowPage()),
+                );
+              },
               child: Text("click this"),
             ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class BuyNowPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blueGrey[600],
+      appBar: AppBar(
+        title: Text("PAYMENT"),
+        centerTitle: true,
+        backgroundColor: Colors.blueGrey[800],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(30, 20, 30, 10),
+        child: Column(
+          // crossAxisAlignment: CrossAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+
           ],
         ),
       ),
