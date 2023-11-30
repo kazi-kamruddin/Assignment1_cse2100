@@ -99,11 +99,117 @@ class ProductDetailsPage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => BuyNowPage()),
+                );
+              },
               child: Text("click this"),
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class BuyNowPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blueGrey[600],
+      appBar: AppBar(
+        title: Text("PAYMENT"),
+        centerTitle: true,
+        backgroundColor: Colors.blueGrey[800],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(30, 20, 30, 10),
+        child: Column(
+          // crossAxisAlignment: CrossAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SizedBox(width: 20),
+                Text('Choose payment method: '),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                PaymentButton(imagePath: 'assets/bKash.jpg'),
+                PaymentButton(imagePath: 'assets/nagad.jpg'),
+                PaymentButton(imagePath: 'assets/rocket.jpg'),
+                PaymentButton(imagePath: 'assets/paypal.jpg'),
+                // Center(
+                //   child: InkWell(
+                //     onTap: () {},
+                //     child: ClipOval(
+                //       child: SizedBox(
+                //         width: 100,
+                //         height: 100,
+                //         child: Ink.image(
+                //           image: AssetImage('chobi/kassandra.jpg'),
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                // ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SizedBox(width: 20),
+                Text('Specify your division: '),
+              ],
+            ),
+            SizedBox(height: 20),
+            DropdownButton<String>(
+              items: ['Barishal', 'Chittagong', 'Dhaka', 'Khulna','Mymensingh', 'Rajshahi', 'Rangpur', 'Sylhet']
+                  .map((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+              onChanged: (String? newValue) {
+                // Do something with the selected value
+              },
+              hint: Text('Choose division'),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text("Go Back"),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class PaymentButton extends StatelessWidget {
+  final String imagePath;
+
+  const PaymentButton({Key? key, required this.imagePath}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Image.network(
+        imagePath,
+        height: 80,
+        width: 80,
       ),
     );
   }
