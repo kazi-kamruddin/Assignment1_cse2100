@@ -130,14 +130,30 @@ class BuyNowPage extends StatelessWidget {
           // crossAxisAlignment: CrossAxisAlignment.center,
           // mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text('data'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SizedBox(width: 20),
+                Text('data'),
+              ],
+            ),
             SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Image.asset(
-                  'chobi/kassandra.jpg',
-                  height: 40,
+                Center(
+                  child: InkWell(
+                    onTap: () {},
+                    child: ClipOval(
+                      child: SizedBox(
+                        width: 100,
+                        height: 100,
+                        child: Ink.image(
+                          image: AssetImage('chobi/kassandra.jpg'),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
                 Image.asset(
                   'chobi/kassandra.jpg',
