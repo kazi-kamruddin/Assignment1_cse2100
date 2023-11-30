@@ -61,20 +61,25 @@ class ProductDetailsPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(width: 50),
-                SizedBox(width: 10),
+                SizedBox(width: 80),
+                Icon(
+                  Icons.attach_money, // Dollar icon
+                  color: Colors.orange,
+                  size: 28,
+                ),
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.orange,
+                    borderRadius: BorderRadius.circular(10),
                     border: Border.all(
                         color: Colors.black,
                         width: 2,
                     ),
                   ),
                   child: Text(
-                    '100',
+                    '65',
                     style: TextStyle(
-                      fontSize: 23,
+                      fontSize: 21,
                     ),
                   ),
                 ),
