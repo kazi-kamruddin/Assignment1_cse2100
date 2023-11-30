@@ -42,21 +42,43 @@ class ProductDetailsPage extends StatelessWidget {
               ],
             ),
             SizedBox(height: 20),
-            Container(
-              decoration: BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(
-                    color: Colors.black,
-                    width: 2,
+            Row(
+              children: [
+                SizedBox(width: 170),
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        color: Colors.black,
+                        width: 2,
+                      ),
+                    ),
+                  ),
+                  child: Text(
+                    'kassandra',
+                    style: TextStyle(
+                      fontSize: 23,
+                    ),
                   ),
                 ),
-              ),
-              child: Text(
-                'kassandra',
-                style: TextStyle(
-                  fontSize: 23,
+                SizedBox(width: 50),
+                SizedBox(width: 10),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.orange,
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 2,
+                    ),
+                  ),
+                  child: Text(
+                    '100',
+                    style: TextStyle(
+                      fontSize: 23,
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
             SizedBox(height: 20),
             Container(
