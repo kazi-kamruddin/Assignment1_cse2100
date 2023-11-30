@@ -19,7 +19,7 @@ class ProductDetailsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blueGrey[600],
       appBar: AppBar(
-        title: Text("Greek assassin"),
+        title: Text("Available Product"),
         centerTitle: true,
         backgroundColor: Colors.blueGrey[800],
       ),
@@ -34,8 +34,8 @@ class ProductDetailsPage extends StatelessWidget {
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(80),
-                  child: Image.asset(
-                    'chobi/kassandra.jpg',
+                  child: Image.network(
+                    'chobi/milan.jpg',
                     height: 200,
                   ),
                 ),
@@ -141,24 +141,60 @@ class BuyNowPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                PaymentButton(imagePath: 'assets/bKash.jpg'),
-                PaymentButton(imagePath: 'assets/nagad.jpg'),
-                PaymentButton(imagePath: 'assets/rocket.jpg'),
-                PaymentButton(imagePath: 'assets/paypal.jpg'),
-                // Center(
-                //   child: InkWell(
-                //     onTap: () {},
-                //     child: ClipOval(
-                //       child: SizedBox(
-                //         width: 100,
-                //         height: 100,
-                //         child: Ink.image(
-                //           image: AssetImage('chobi/kassandra.jpg'),
-                //         ),
-                //       ),
-                //     ),
-                //   ),
-                // ),
+                Center(
+                  child: InkWell(
+                    onTap: () {},
+                    child: ClipOval(
+                      child: SizedBox(
+                        width: 80,
+                        height: 80,
+                        child: Ink.image(
+                          image: NetworkImage('chobi/bKash.png'),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Center(
+                  child: InkWell(
+                    onTap: () {},
+                    child: ClipOval(
+                      child: SizedBox(
+                        width: 80,
+                        height: 80,
+                        child: Ink.image(
+                          image: NetworkImage('chobi/nagad.png'),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),Center(
+                  child: InkWell(
+                    onTap: () {},
+                    child: ClipOval(
+                      child: SizedBox(
+                        width: 80,
+                        height: 80,
+                        child: Ink.image(
+                          image: NetworkImage('chobi/rocket.png'),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),Center(
+                  child: InkWell(
+                    onTap: () {},
+                    child: ClipOval(
+                      child: SizedBox(
+                        width: 80,
+                        height: 80,
+                        child: Ink.image(
+                          image: NetworkImage('chobi/paypal.png'),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
             SizedBox(height: 20),
