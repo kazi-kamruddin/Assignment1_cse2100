@@ -134,7 +134,7 @@ class BuyNowPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SizedBox(width: 20),
-                Text('data'),
+                Text('Choose payment method: '),
               ],
             ),
             SizedBox(height: 20),
@@ -199,7 +199,27 @@ class BuyNowPage extends StatelessWidget {
               ],
             ),
             SizedBox(height: 20),
-            Text('data'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SizedBox(width: 20),
+                Text('Specify your division: '),
+              ],
+            ),
+            SizedBox(height: 20),
+            DropdownButton<String>(
+              items: ['Barishal', 'Chittagong', 'Dhaka', 'Khulna','Mymensingh', 'Rajshahi', 'Rangpur', 'Sylhet']
+                  .map((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+              onChanged: (String? newValue) {
+                // Do something with the selected value
+              },
+              hint: Text('division'),
+            ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
