@@ -156,7 +156,12 @@ class BuyNowPage extends StatelessWidget {
             SizedBox(height: 20),
             Text('data'),
             SizedBox(height: 20),
-
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text("Go Back"),
+            ),
           ],
         ),
       ),
