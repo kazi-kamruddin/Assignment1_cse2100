@@ -130,11 +130,17 @@ class BuyNowPage extends StatelessWidget {
           // crossAxisAlignment: CrossAxisAlignment.center,
           // mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SizedBox(width: 20),
-                Text('Choose payment method: '),
+                Text(
+                  'Choose payment method: ',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
               ],
             ),
             SizedBox(height: 20),
@@ -168,7 +174,8 @@ class BuyNowPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                ),Center(
+                ),
+                Center(
                   child: InkWell(
                     onTap: () {},
                     child: ClipOval(
@@ -181,7 +188,8 @@ class BuyNowPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                ),Center(
+                ),
+                Center(
                   child: InkWell(
                     onTap: () {},
                     child: ClipOval(
@@ -193,6 +201,36 @@ class BuyNowPage extends StatelessWidget {
                         ),
                       ),
                     ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children:[
+                Text(
+                  'BKASH',
+                  style: TextStyle(
+                    fontSize: 17,
+                  ),
+                ),
+                Text(
+                  'NAGAD',
+                  style: TextStyle(
+                    fontSize: 17,
+                  ),
+                ),
+                Text(
+                  'ROCKET',
+                  style: TextStyle(
+                    fontSize: 17,
+                  ),
+                ),
+                Text(
+                  'PAYPAL',
+                  style: TextStyle(
+                    fontSize: 17,
                   ),
                 ),
               ],
