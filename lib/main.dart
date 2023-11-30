@@ -155,17 +155,46 @@ class BuyNowPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Image.asset(
-                  'chobi/kassandra.jpg',
-                  height: 40,
+                Center(
+                  child: InkWell(
+                    onTap: () {},
+                    child: ClipOval(
+                      child: SizedBox(
+                        width: 100,
+                        height: 100,
+                        child: Ink.image(
+                          image: AssetImage('chobi/kassandra.jpg'),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
-                Image.asset(
-                  'chobi/kassandra.jpg',
-                  height: 40,
-                ),
-                Image.asset(
-                  'chobi/kassandra.jpg',
-                  height: 40,
+                Center(
+                  child: InkWell(
+                    onTap: () {},
+                    child: ClipOval(
+                      child: SizedBox(
+                        width: 100,
+                        height: 100,
+                        child: Ink.image(
+                          image: AssetImage('chobi/kassandra.jpg'),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),Center(
+                  child: InkWell(
+                    onTap: () {},
+                    child: ClipOval(
+                      child: SizedBox(
+                        width: 100,
+                        height: 100,
+                        child: Ink.image(
+                          image: AssetImage('chobi/kassandra.jpg'),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
