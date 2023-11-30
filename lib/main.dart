@@ -17,11 +17,11 @@ class ProductDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[600],
+      backgroundColor: Colors.black45,
       appBar: AppBar(
         title: Text("Available Product"),
         centerTitle: true,
-        backgroundColor: Colors.blueGrey[800],
+        backgroundColor: Colors.black54,
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(30, 20, 30, 10),
@@ -46,10 +46,16 @@ class ProductDetailsPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                SizedBox(width: 170),
+                SizedBox(width: 105),
                 Container(
                   decoration: BoxDecoration(
-                    border: Border(
+                    border: Border.(
+                      bottom: BorderSide(
+                        color: Colors.black,
+                        width: 2,
+                      ),
+                    ),
+                    : Border(
                       bottom: BorderSide(
                         color: Colors.black,
                         width: 2,
@@ -57,13 +63,13 @@ class ProductDetailsPage extends StatelessWidget {
                     ),
                   ),
                   child: Text(
-                    'kassandra',
+                    'AC Milan Home Kit',
                     style: TextStyle(
                       fontSize: 23,
                     ),
                   ),
                 ),
-                SizedBox(width: 80),
+                SizedBox(width: 40),
                 Icon(
                   Icons.attach_money, // Dollar icon
                   color: Colors.orange,
@@ -99,13 +105,16 @@ class ProductDetailsPage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Colors.red,minimumSize: Size(60, 60),
+              ),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => BuyNowPage()),
                 );
               },
-              child: Text("click this"),
+              child: Text("click here"),
             ),
           ],
         ),
@@ -205,45 +214,50 @@ class BuyNowPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 15),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children:[
                 Text(
                   'BKASH',
                   style: TextStyle(
-                    fontSize: 17,
+                    fontSize: 15,
                   ),
                 ),
                 Text(
                   'NAGAD',
                   style: TextStyle(
-                    fontSize: 17,
+                    fontSize: 15,
                   ),
                 ),
                 Text(
                   'ROCKET',
                   style: TextStyle(
-                    fontSize: 17,
+                    fontSize: 15,
                   ),
                 ),
                 Text(
                   'PAYPAL',
                   style: TextStyle(
-                    fontSize: 17,
+                    fontSize: 15,
                   ),
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 55),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(width: 20),
-                Text('Specify your division: '),
+                SizedBox(width: 13),
+                Text(
+                  'Specify your division: ',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
               ],
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 15),
             DropdownButton<String>(
               items: ['Barishal', 'Chittagong', 'Dhaka', 'Khulna','Mymensingh', 'Rajshahi', 'Rangpur', 'Sylhet']
                   .map((String value) {
@@ -259,6 +273,9 @@ class BuyNowPage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Colors.red,minimumSize: Size(60, 60),
+              ),
               onPressed: () {
                 Navigator.pop(context);
               },
