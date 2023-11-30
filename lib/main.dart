@@ -97,10 +97,10 @@ class ProductDetailsPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 35),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Colors.red,minimumSize: Size(60, 60),
+                primary: Colors.red[900],minimumSize: Size(60, 60),
               ),
               onPressed: () {
                 Navigator.push(
@@ -108,8 +108,14 @@ class ProductDetailsPage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => BuyNowPage()),
                 );
               },
-              child: Text("click here"),
+              child: Text(
+                "Purchase now",
+                style: TextStyle(
+                  fontSize: 16,
+                ),
+              ),
             ),
+
           ],
         ),
       ),
@@ -123,7 +129,7 @@ class BuyNowPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black45,
       appBar: AppBar(
-        title: Text("PAYMENT"),
+        title: Text("Payment"),
         centerTitle: true,
         backgroundColor: Colors.black54,
       ),
@@ -238,6 +244,15 @@ class BuyNowPage extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(height: 45),
+            Container(
+              child: Text(
+                "________________________________________________________",
+                style: TextStyle(
+                  fontSize: 16,
+                ),
+              ),
+            ),
             SizedBox(height: 55),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -268,7 +283,7 @@ class BuyNowPage extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Colors.red,minimumSize: Size(60, 60),
+                primary: Colors.red[900],minimumSize: Size(60, 60),
               ),
               onPressed: () {
                 Navigator.pop(context);
